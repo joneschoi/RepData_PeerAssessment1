@@ -1,9 +1,6 @@
+# Reproducible Research: Peer Assessment 1
 
-##Reproducible Reserch Peer-graded Assignment: Course Project 1
-
-=============================================================================================================
-
-###Loading and preprocessing the data
+##Loading and preprocessing the data
 
 1. Load the data
 
@@ -27,7 +24,7 @@ head(act)
 ## 6    NA 2012-10-01       25
 ```
 
-###What is mean total number of steps taken per day?
+##What is mean total number of steps taken per day?
 
 1. Make a histogram of the total number of steps taken each day
 
@@ -104,7 +101,7 @@ print(aggregate( steps~date, x, FUN = function(x) c(mean = mean(x), median = med
 ##  2012-11-29  110.10938     44.50000
 ```
 
-###What is the average daily activity pattern?
+##What is the average daily activity pattern?
 
 1. Make a time series plot of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)
 
@@ -128,7 +125,7 @@ print(ActInt[ActInt$steps == max(ActInt$steps),], row.names = FALSE)
 ##       835 206.1698
 ```
 
-###Imputing missing values
+##Imputing missing values
 
 1. Calculate and report the total number of missing values in the dataset 
 
@@ -200,7 +197,7 @@ barplot(Actmed$steps, name = as.Date(Actmed$date), xlab ="Date", ylab="Step", ma
 
 ![](PA1_template_files/figure-html/unnamed-chunk-9-2.png)<!-- -->
 
-###Are there differences in activity patterns between weekdays and weekends?
+##Are there differences in activity patterns between weekdays and weekends?
 
 1. Create a new factor variable in the dataset with two levels -- "weekday" and "weekend" indicating whether a given date is a weekday or weekend day.
 
